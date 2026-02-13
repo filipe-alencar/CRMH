@@ -25,7 +25,7 @@ const Index = () => {
     <div className="relative flex min-h-screen items-center justify-center bg-background overflow-hidden">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <div className="h-[500px] w-[500px] rounded-full bg-primary/5 blur-[120px]" />
+        <div className="h-[600px] w-[600px] rounded-full bg-primary/5 blur-[120px]" />
       </div>
 
       {/* Theme toggle */}
@@ -38,21 +38,21 @@ const Index = () => {
       </button>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center gap-8 px-4 text-center">
+      <div className="relative z-10 flex flex-col items-center gap-10 px-4 text-center">
         <div className="flex flex-col items-center gap-3">
-          <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
+          <h1 className="text-6xl font-bold tracking-tight text-foreground sm:text-8xl">
             MARIA SILVA
           </h1>
-          <p className="text-sm tracking-[0.35em] text-muted-foreground uppercase">
+          <p className="text-base tracking-[0.35em] text-muted-foreground uppercase sm:text-lg">
             Produção Audiovisual
           </p>
-          <p className="text-sm text-muted-foreground/70">
+          <p className="text-base text-muted-foreground/70">
             Coord./1ª Assist. de Produção - Assist. de Direção
           </p>
         </div>
 
         {/* Social icons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-5">
           {socialLinks.map(({ icon: Icon, href, label }) => (
             <a
               key={label}
@@ -60,7 +60,7 @@ const Index = () => {
               aria-label={label}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
+              className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
             >
               <Icon className="h-5 w-5" />
             </a>
