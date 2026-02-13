@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { MessageCircle, Instagram, Mail, Globe, Sun, Moon } from "lucide-react";
 
 const socialLinks = [
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Mail, href: "#", label: "Email" },
-  { icon: Globe, href: "#", label: "Website" },
-];
+{ icon: MessageCircle, href: "#", label: "WhatsApp" },
+{ icon: Instagram, href: "#", label: "Instagram" },
+{ icon: Mail, href: "#", label: "Email" },
+{ icon: Globe, href: "#", label: "Website" }];
+
 
 const Index = () => {
   const [dark, setDark] = useState(() => {
@@ -32,8 +32,8 @@ const Index = () => {
       <button
         onClick={() => setDark(!dark)}
         className="absolute top-6 right-6 z-10 rounded-full p-2 text-muted-foreground transition-colors hover:text-foreground"
-        aria-label="Toggle theme"
-      >
+        aria-label="Toggle theme">
+
         {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
       </button>
 
@@ -43,32 +43,32 @@ const Index = () => {
           <h1 className="text-6xl font-bold tracking-tight text-foreground sm:text-8xl">
             MARIA SILVA
           </h1>
-          <p className="text-base tracking-[0.35em] text-muted-foreground uppercase sm:text-lg">
+          <p className="text-base tracking-[0.35em] text-muted-foreground uppercase sm:text-2xl">
             Produção Audiovisual
           </p>
-          <p className="text-base text-muted-foreground/70">
+          <p className="text-muted-foreground/70 text-xl">
             Coord./1ª Assist. de Produção - Assist. de Direção
           </p>
         </div>
 
         {/* Social icons */}
         <div className="flex items-center gap-5">
-          {socialLinks.map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              aria-label={label}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
-            >
+          {socialLinks.map(({ icon: Icon, href, label }) =>
+          <a
+            key={label}
+            href={href}
+            aria-label={label}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30">
+
               <Icon className="h-5 w-5" />
             </a>
-          ))}
+          )}
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
