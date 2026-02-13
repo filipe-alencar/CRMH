@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { MessageCircle, Instagram, Mail, Globe, Sun, Moon } from "lucide-react";
+import { MessageCircle, Instagram, Mail, Globe, Film, Sun, Moon } from "lucide-react";
 
 const socialLinks = [
-{ icon: MessageCircle, href: "#", label: "WhatsApp" },
-{ icon: Instagram, href: "#", label: "Instagram" },
-{ icon: Mail, href: "#", label: "Email" },
-{ icon: Globe, href: "#", label: "Website" }];
+  { icon: MessageCircle, href: "#", label: "WhatsApp" },
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Mail, href: "#", label: "Email" },
+  { icon: Globe, href: "#", label: "Website" },
+  { icon: Film, href: "#", label: "IMDB" },
+];
 
 
 const Index = () => {
@@ -60,9 +62,9 @@ const Index = () => {
             aria-label={label}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30">
+            className="flex h-16 w-16 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30">
 
-              <Icon className="h-5 w-5" />
+              <Icon className="h-7 w-7" />
             </a>
           )}
         </div>
